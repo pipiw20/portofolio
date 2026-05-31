@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./dist/tsbuildinfo.json",
+    "skipLibCheck": true
+  },
+  "include": ["next.config.ts", "postcss.config.ts"]
+}

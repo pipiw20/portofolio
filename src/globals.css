@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Sora", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-cosmic-dark text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-glass border border-white/20 rounded-glass;
+  }
+
+  .glass-hover {
+    @apply glass hover:bg-white/20 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-deep-pink text-white rounded-glass font-semibold hover:shadow-glow-pink transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white/10 border border-white/30 text-white rounded-glass font-semibold hover:bg-white/20 transition-all duration-300;
+  }
+
+  .card {
+    @apply glass p-6 hover:shadow-glow-pink transition-all duration-300 hover:translate-y-[-4px];
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold bg-gradient-to-r from-deep-pink to-cyan-accent bg-clip-text text-transparent;
+  }
+
+  .glow-text {
+    @apply text-deep-pink drop-shadow-[0_0_8px_rgba(255,113,206,0.6)];
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050810;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff71ce;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff00ff;
+}

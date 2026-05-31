@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\berkas pipiw\\portofolio"
+      ],
+      "type": "stdio"
+    }
+  },
+  "inputs": []
+}
