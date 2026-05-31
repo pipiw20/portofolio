@@ -2,7 +2,6 @@
 
 import React from "react";
 
-// Kita definisikan ulang tipe datanya agar page.tsx tidak eror
 interface FooterProps {
   onNavigate?: (section: 'home' | 'about' | 'skills' | 'work' | 'contact') => void;
 }
@@ -17,24 +16,14 @@ export default function Footer({ onNavigate }: FooterProps) {
           &copy; {new Date().getFullYear()} CODE.PINK. ALL RIGHTS RESERVED.
         </p>
 
-        {/* Tautan Menu Internal & Eksternal */}
+        {/* Tautan Menu */}
         <div className="flex gap-6 font-['Space_Mono'] text-xs tracking-wider">
-          {/* Tombol Navigasi Internal yang Menggunakan Properti onNavigate (Linter Pasti Lolos!) */}
           <button 
             onClick={() => onNavigate?.('about')}
-            className="text-[#dce1fe]/60 hover:text-[#ffaedc] transition-colors cursor-pointer"
+            className="text-[#dce1fe]/60 hover:text-[#ffaedc] transition-colors"
           >
             About
           </button>
-          
-          <button 
-            onClick={() => onNavigate?.('skills')}
-            className="text-[#dce1fe]/60 hover:text-[#ffaedc] transition-colors cursor-pointer"
-          >
-            Skills
-          </button>
-
-          {/* Tautan Luar menuju GitHub */}
           <a 
             href="https://github.com/pipiw20" 
             target="_blank" 
